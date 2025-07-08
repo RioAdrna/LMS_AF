@@ -7,12 +7,9 @@
                     <div class="card-header border-2">
                         <div class="d-flex justify-content-between">
                         <div class="col-10">
-                        <h6><i class="fas fa-info-circle"></i>  Detail Guru</h6>
+                        <h6><i class="fas fa-info-circle"></i>  Profile</h6>
                 </div>
-                <div class="col-2">
-                  <a href="<?= base_url('?p=guru')?>" class="btn btn-danger" style="float:right;">
-                  <i class="fa fa-arrow-circle-left"></i> Kembali</a>
-                </div>
+            
 
                 <!-- <di class="col-2 my-auto text-end">
                   <div class="dropdown float-lg-end pe-4">
@@ -174,7 +171,4 @@
                </div>
             </div>
        </div>
-    </div>
-    <br>
-    </div>
     </div>

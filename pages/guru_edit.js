@@ -56,12 +56,13 @@ $(document).ready(function () {
     maxFileSize: "3MB",
     instantUpload: true,
     labelIdle: `
-                  <div style="width:100%;height:100%;">
-                      <p>
-                      <br>Seret &amp; Simpan foto diarea ini atau <span class="filepond--label-action" tabindex="0">Klik disini</span><br>
-                  </p>
-                  </div>
-              `,
+    <div style="width:100%;height:100%;">
+        <p>
+            <br><i class="fas fa-camera"></i><br>
+        </p>
+    </div>
+`,
+
     acceptedFileTypes: ["image/jpeg", "image/png"],
     fileValidateTypeDetectType: (source, type) =>
       new Promise((resolve, reject) => {

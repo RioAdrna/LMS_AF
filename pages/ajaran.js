@@ -25,7 +25,7 @@ $(function(){
 
         //Pengecekan Isi dari jurusan
         if(kurikulum.length < 1){
-            swal("Kurikulum wajib diisi", {icon: "error"});
+            Swal.fire({title : "Kurikulum wajib diisi", icon: "error"});                       
         } 
     
         //Pengecekan muatan mapel
@@ -48,10 +48,14 @@ $(function(){
                 data    : { nm_kurikulum: kurikulum, tahun_ajaran1: ajaran1, tahun_ajaran2: ajaran2 },
                 dataType: "json", //Java Script Object Notation
                 error : function(){
-                    swal("Sistem Bermasalah", {icon: "error"});
+                    Swal.fire({title : "Sistem Bermasalah", icon: "error"});                       
                 },
                 success: function(res){
-                    swal(res.message, {icon:res.status}).then(function(){
+                    Swal.fire({
+                        title: res.message,
+                        icon: "success"
+                    })              
+                    .then(function(){
                         // location.reload();
                         $("#exampleModal").modal("hide");
                         $("#kurikulum").val("");
@@ -76,15 +80,16 @@ $(function(){
 })
 
 function hapus(id){
-    swal({
+    Swal.fire({
         title: "Apakah anda yakin?",
-        text: "Data  yang dihapus tidak dapat dikembalikan",
+        text: "Data yang anda hapus tidak dapat dikembalikan!",
         icon: "warning",
-        buttons: ["Batalkan","Hapus sekarang"],
-        dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) {
+        showCancelButton: true,
+        confirmButtonColor: "#28A745",
+        cancelButtonColor: "#DC3545",
+        confirmButtonText: "Ya, hapus sekarang!"
+      }).then((result) => {
+        if (result.isConfirmed) {
             // perintah asincronous JS & XML (AJAX)
             $.ajax({
                 url     : base_url+"api/ajaran/hapus_data",
@@ -92,10 +97,14 @@ function hapus(id){
                 data    : {id: id},
                 dataType: "json", //Java Script Object Notation
                 error : function(){
-                    swal("Sistem Bermasalah", {icon: "error"});
+                    Swal.fire({title : "Sistem Bermasalah", icon: "error"});                       
                 },
                 success: function(res){
-                    swal(res.message, {icon:res.status}).then(function(){  
+                    Swal.fire({
+                        title: res.message,
+                        icon: "success"
+                    })              
+                    .then(function(){ 
         
                         $("#tabel_ajaran").DataTable().destroy();
                         $("#tabel_ajaran").DataTable({
@@ -111,9 +120,7 @@ function hapus(id){
                 }
             });
     
-        } else {
-          swal("Anda membatalkan");
-        }
+        }   
       });
     }
 

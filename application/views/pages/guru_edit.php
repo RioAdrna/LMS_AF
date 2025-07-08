@@ -45,7 +45,7 @@
                 </div>
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                  <img id="img_logo" src="<?= base_url("assets/img/avatars/no-image.png")?>" alt="Admin" class="rounded-square" width="144" height="211">
+                  <img id="img_logo" src="<?= base_url("assets/img/avatars/no-image.png")?>" alt="Admin" class="rounded-square" width="170" height="231">
                   </div>
                   <div class="card-body">
                     <div class="col-md-12">
@@ -240,3 +240,6 @@
             </div>
        </div>
     </div>
+    <br>
+</div>
+</div>

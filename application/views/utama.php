@@ -109,7 +109,7 @@ https://templatemo.com/tm-590-topic-listing
                                         <div>
                                             <h5 class="text-white mb-2">Informasi</h5>
 
-                                            <p class="text-white">LeMaS SMK Al-Falah adalah perangkat lunak yang mengatur penyampaian materi pembelajaran</p>
+                                            <p class="text-white">LeMaS SMK Al-Falah adalah perangkat lunak yang mengatur penyampaian materi dan tugas pembelajaran.</p>
                                             <p class="text-white">Silahkan Login Dan Mulai Belajar</p>
                                             <h8 class="text-white">Belum Punya Akun? silahkan Registrasi &nbsp;</h8>
                                             <a href="<?= base_url('login') ?>" class="btn custom-btn mt-0 mt-lg-3">Registrasi</a>
@@ -222,7 +222,7 @@ https://templatemo.com/tm-590-topic-listing
 
            <div class="col-lg-12 col-12">
                 <div class="text-center">
-                    <p class="copyright-text">Copyright &copy; 2024 SMKS AL-FALAH BANDUNG . All rights reserved</p>
+                    <p class="copyright-text">Copyright &copy; 2025 SMKS AL-FALAH BANDUNG . All rights reserved</p>
                     <p class="copyright-text">Developed by <a rel="nofollow" href="#">Rio Adriana</a> Supported by <a rel="nofollow" href="#">WeiTECH Indonesia</a></p>
                 </div>
             </div>
